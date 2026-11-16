@@ -1,0 +1,227 @@
+/* Qui s'applique à toute la page, pour une police, gestion de margin et de padding */
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Pour que lorsqu'on appuie sur le bouton qui permet d'aller vers une partie, ça soit fluide */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1e1e24;
+  color: #fff;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Gestion de la nav bar */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.brand {
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFCB3D;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #1e1e24;
+  background: #FFCB3D;
+}
+
+.nav-links .btn {
+  background: #FFCB3D;
+  color: #1e1e24;
+}
+
+.nav-links .btn:hover {
+  background: #e0b030;
+  color: #fff;
+}
+
+.jaune {
+  color: #FFCB3D;
+}
+
+/* Style qui s'applique à tout le main */
+main {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Gère le style du titre */
+.hero {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/* Gère le titre */
+
+h1 {
+  font-size: 2.2rem;
+  color: #FFCB3D;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Gère les sous titres */
+
+h2 {
+  color: #FFCB3D;
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+}
+
+/* Gère les boutons de navigation, le style la taille, les espaces, etc... */
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 30px 0 60px 0;
+}
+
+.navigation a {
+  padding: 8px 16px;
+  background-color: #FFCB3D;
+  color: #1e1e24;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+/* Lorsqu'on passe la souris sur les boutons, la couleur s'assombrit */
+.navigation a:hover {
+  background-color: #e0b030;
+}
+
+/* Flexbox pour les différentes zones de textes et d'images */
+.paragraphe1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 80px;
+  line-height: 1.6;
+}
+
+/* Permet de créer un effet zig-zag, un bloc de texte/image sur deux est à gauche et l'autre à droite*/
+.paragraphe1:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+
+/* Dit à .texte de prendre toute la place disponible en s'agrandissant ou en rétrecissant aux besoins */
+.texte {
+  flex: 1;
+}
+
+/* Permet aussi de prendre la place nécessaire, et à mettre au centre .image */
+.image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Fixe des limites aux images pour ajuster hauteur et largeur, arondir les bords, mettre une bordure de couleur */
+.image img {
+  width: 70%;
+  max-width: 480px;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 203, 61, 0.3);
+  object-fit: cover; /* Redimensionne l'image pour qu'elle remplisse tout le cadre */
+}
+
+.soustitre {
+  margin-bottom: 15px;
+}
+
+/* Dans la classe p, changer la taille de police, la couleur, mettre en italique et en gras */
+.soustitre p {
+  font-weight: bold;
+  color: #94a3b8;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.texte p {
+  margin-bottom: 14px;
+}
+
+/* Dans .texte mettre ul plus espacé de la gauche, en colonne, avec un espace entre chaque argument */
+.texte ul {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+/* Gestion du footer */
+footer {
+  margin-top: auto;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-style: italic;
+  color: #94a3b8;
+}
+
+/* Lorsque la souris passe sur une image, elle grossit et possède une animation de fluidité */
+img:hover {
+  transition: transform 0.4s ease;
+  transform: scale(1.05);
+}
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+  .paragraphe1,
+  .paragraphe1:nth-of-type(even) {
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 50px;
+  }
+}

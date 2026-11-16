@@ -1,0 +1,183 @@
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1e1e24;
+  color: #fff;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.brand {
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFCB3D;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #1e1e24;
+  background: #FFCB3D;
+}
+
+.nav-links .btn {
+  background: #FFCB3D;
+  color: #1e1e24;
+}
+
+.nav-links .btn:hover {
+  background: #e0b030;
+  color: #fff;
+}
+
+.jaune {
+  color: #FFCB3D;
+}
+
+main {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: #FFCB3D;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #FFCB3D;
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+}
+
+.soustitre {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.soustitre p {
+  font-weight: bold;
+  color: #94a3b8;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.combattant {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.combattant:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+
+.texte {
+  flex: 1;
+  line-height: 1.6;
+}
+
+.categorie {
+  font-weight: bold;
+  color: #94a3b8;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image img {
+  width: 260px;
+  height: 320px;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 203, 61, 0.3);
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.image img:hover {
+  transform: scale(1.05);
+}
+
+.vert{
+    color: rgb(3, 186, 3);
+}
+
+.blanc{
+    color: white;
+}
+
+.orange{
+    color: rgb(243, 171, 38);
+}
+
+.rouge{
+    color: red;
+}
+
+.bleu{
+    color: rgb(35, 35, 246);
+}
+
+footer {
+  margin-top: auto;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-style: italic;
+  color: #94a3b8;
+}
